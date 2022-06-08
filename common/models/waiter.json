@@ -1,0 +1,23 @@
+{
+  "name": "Waiter",
+  "plural": "waiters",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "waiterName": {
+      "type": "string",
+      "required": true
+    },
+    "waiterRowNumber": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

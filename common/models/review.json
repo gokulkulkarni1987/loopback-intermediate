@@ -2,10 +2,10 @@
   "name": "Review",
   "base": "PersistedModel",
   "idInjection": true,
-  "forceId": false,
   "options": {
     "validateUpsert": true
   },
+  "forceId": false,
   "properties": {
     "date": {
       "type": "date",
@@ -56,6 +56,12 @@
       "accessType": "WRITE",
       "principalType": "ROLE",
       "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
       "permission": "ALLOW"
     }
   ],

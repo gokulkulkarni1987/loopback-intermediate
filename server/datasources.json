@@ -20,5 +20,14 @@
     "password": "L00pBack",
     "name": "mongoDs",
     "connector": "mongodb"
+  },
+  "MongoDB": {
+    "host": "ds261660.mlab.com",
+    "port": 61660,
+    "database": "coffee_shop",
+    "password": "gomathi123",
+    "name": "MongoDB",
+    "user": "gokulkulkarnisoczen",
+    "connector": "mongodb"
   }
 }

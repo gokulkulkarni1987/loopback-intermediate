@@ -1,4 +1,4 @@
-'use strict';
+  'use strict';
 
 module.exports = function(CoffeeShop) {
   CoffeeShop.status = function(cb) {
@@ -15,6 +15,12 @@ module.exports = function(CoffeeShop) {
     }
     cb(null, response);
   };
+
+  CoffeeShop.open = function(cb) {
+    var response = {status: 'open'};
+    cb(null, response);
+  };
+
   CoffeeShop.remoteMethod(
     'status', {
       http: {
@@ -24,6 +30,19 @@ module.exports = function(CoffeeShop) {
       returns: {
         arg: 'status',
         type: 'string',
+      },
+    }
+  );
+
+  CoffeeShop.remoteMethod(
+    'open', {
+      http: {
+        path: '/open',
+        verb: 'get',
+      },
+      returns: {
+        arg: 'open',
+        type: 'Object',
       },
     }
   );
